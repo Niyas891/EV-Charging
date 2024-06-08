@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Alert</title>
+</head>
+
+<body>
+{% if msg1=="1" %}
+<h4>Waiting for Car - {{vno}}</h4>
+{% endif %}
+
+{% if msg2=="2" %}
+<h2>{{mess}}</h2>
+<iframe src="http://iotcloud.co.in/testsms/sms.php?sms=emr&name={{name}}&mess={{mess}}&mobile={{mobile}}" width="10" height="10" ></iframe>
+{% endif %}
+
+{% if msg1=="3" %}
+<p align="center">Car: {{vno}}
+<br>
+<a href="/page2?rid2={{rid2}}">Reschedule</a>
+</p>
+{% endif %}
+
+
+{% if msg1=="4" %}
+<p align="center">Car: {{vno}}
+<br>
+<a href="/page2?rid2={{rid2}}">Reschedule</a>
+</p>
+{% endif %}
+<script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.location.href= '/page';
+}, 10000);
+</script>
+</body>
+</html>

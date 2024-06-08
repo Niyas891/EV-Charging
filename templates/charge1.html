@@ -1,0 +1,15 @@
+
+{% if csec<=60 %}
+
+Charging {{cmin}}:{{csec}}
+	<script>
+setTimeout(function () {
+   window.location.href= '/charge1?act1=chr&rid={{rid}}';
+}, 1000);
+</script>
+
+{% else %}
+
+<span class=style2>Charging Completed</span>
+
+{% endif %}
